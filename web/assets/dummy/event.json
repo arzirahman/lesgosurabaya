@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Dessert Day PTC",
+        "location": "Main Atrium LG Floor, PTC, Surabaya",
+        "image": "/images/event/1.png"
+    },
+    {
+        "name": "ISSLF x GC",
+        "location": "Main Atrium Level Ground, Grand City Mall Surabaya",
+        "image": "/images/event/2.png"
+    },
+    {
+        "name": "Chinese New Year TP",
+        "location": "Atrium Tunjungan Plaza 6, Surabaya",
+        "image": "/images/event/3.png"
+    },
+    {
+        "name": "Xplora",
+        "location": "Grand Atrium Pakuwon Mall Surabaya",
+        "image": "/images/event/4.png"
+    },
+    {
+        "name": "Home Sweet Home",
+        "location": "Main Atrium LG Floor, Pakuwon Trade Center (PTC), Surabaya",
+        "image": "/images/event/5.png"
+    },
+    {
+        "name": "Kaka Jeweluxe",
+        "location": "Event Project X Market, Tunjungan Plaza 3, Lv 6, Surabaya",
+        "image": "/images/event/6.png"
+    },
+    {
+        "name": "Kepo Asian Culinary",
+        "location": "Atrium Galaxy Mall 3, Surabaya",
+        "image": "/images/event/7.png"
+    },
+    {
+        "name": "Matcha Addict",
+        "location": "tunjungan Plaza 3, Lv 6, Surabaya"
+    }
+]

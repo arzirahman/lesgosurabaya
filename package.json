@@ -1,0 +1,36 @@
+{
+  "name": "lesgosurabaya",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start --prefix api",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "build": "concurrently \"npm run build:api\" \"npm run build:web\"",
+    "api": "npm run dev --prefix api",
+    "web": "npm run dev --prefix web",
+    "dev:web": "npm run dev --prefix web",
+    "dev:api": "npm run dev --prefix api",
+    "build:web": "npm run build --prefix web",
+    "build:api": "npm run build --prefix api",
+    "db:generate": "npm run db:generate --workspace=api",
+    "db:migrate": "npm run db:migrate --workspace=api",
+    "db:ui": "npm run db:ui --workspace=api"
+  },
+  "workspaces": [
+    "api",
+    "web"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "concurrently": "^9.1.2",
+    "dotenv-cli": "^8.0.0",
+    "typescript": "^5.8.3"
+  }
+}

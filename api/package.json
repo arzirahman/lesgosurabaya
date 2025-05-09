@@ -1,0 +1,37 @@
+{
+  "name": "lesgosurabaya-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node index.ts",
+    "build": "tsc",
+    "start": "node ../dist/api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:ui": "dotenv -e ../.env npx prisma studio",
+    "db:migrate": "dotenv -e ../.env npx prisma migrate dev",
+    "db:generate": "dotenv -e ../.env npx prisma generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.15.3",
+    "@types/validator": "^13.15.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.7.0",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.7.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "validator": "^13.15.0"
+  }
+}

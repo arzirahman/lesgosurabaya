@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Drift.inc",
+        "location": "Jl. Kaliwaron No. 60, Mojo, Surabaya",
+        "image": "/images/explore/wisata/1.jpg"
+    },
+    {
+        "name": "BYEBELI",
+        "location": "Jl. Raya Palm Hill No.K8/12, Surabaya",
+        "image": "/images/explore/wisata/2.jpg"
+    },
+    {
+        "name": "Dreamfield Tactical",
+        "location": "The Central Mall, Floor 2,Jl. Tidar, Surabaya",
+        "image": "/images/explore/wisata/3.png"
+    },
+    {
+        "name": "The Ramoe",
+        "location": "Excotel Surabaya, Jl. Ahmad Yani No. 119",
+        "image": "/images/explore/wisata/4.png"
+    },
+    {
+        "name": "Kommafuku",
+        "location": "2nd Floor of Locaahanos Dining Club, Jl. Jawa No.6"
+    },
+    {
+        "name": "Mang Engking",
+        "location": "Jl. Gubeng Masjid, Pasar Keling, Surabaya"
+    },
+    {
+        "name": "The Wolves",
+        "location": "Ruko Margoraya, Jl. Raya Margorejo Indah No. 115"
+    },
+    {
+        "name": "Steak Industry",
+        "location": "Jl. Nias No. 140, Surabaya"
+    },
+    {
+        "name": "Yamie Panda",
+        "location": "Studio Food Court, Lt.1, Pakuwon Mall Surabaya"
+    },
+    {
+        "name": "Cafe Balek Kampoeng",
+        "location": "Jl. Genteng Besar No. 83C, Surabaya"
+    },
+    {
+        "name": "Warung Apung SDA",
+        "location": "Jl. Sunandar Priyo Sudarmo No.20-22, Sidoarjo"
+    },
+    {
+        "name": "Smoke House and Coffee",
+        "location": "Jl. Taman Ketampon No. 75-76, Surabaya"
+    },
+    {
+        "name": "Nyamuda",
+        "location": "Jl. Darmo Permai Sel. XI No.18, Surabaya"
+    },
+    {
+        "name": "Teazzi",
+        "location": "Pakuwon City Mall 2, Jl. Raya Laguna KJW Putih"
+    },
+    {
+        "name": "Ayam Geprek Dotuman",
+        "location": "Tunjungan Plaza Surabaya"
+    },
+    {
+        "name": "Pari Bendo Lawang",
+        "location": "Jl. Argotirto No. 24, Malang"
+    },
+    {
+        "name": "Ebisu Japanese Restaurant",
+        "location": "Jl. Raya Darmo 68-78, Surabaya"
+    },
+    {
+        "name": "The Kenthangs",
+        "location": "Royal Plaza Lt. G, Surabaya"
+    },
+    {
+        "name": "Roti Srikaya Agogo",
+        "location": "Gwalk Taman Gapura FG-5, Surabaya"
+    },
+    {
+        "name": "Rumah Hantu Kota Lama",
+        "location": "Jl. Rajawali No. 47, Kota Lama, Surabaya"
+    }
+]

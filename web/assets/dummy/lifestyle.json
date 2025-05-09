@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Yoga Fit",
+        "location": "Ruko Puncak Bukit Golf, Blok RBZ",
+        "image": "/images/explore/lifestyle/1.jpg"
+    },
+    {
+        "name": "Katha Beauty Care",
+        "location": "Ruko Puri Indah Ketintang No.5, Surabaya",
+        "image": "/images/explore/lifestyle/2.png"
+    },
+    {
+        "name": "Fifa Gym",
+        "location": "Jl. Raya Rangkah Kidul No. 21, Sidoarjo",
+        "image": "/images/explore/lifestyle/3.png"
+    },
+    {
+        "name": "Arumda Beauty",
+        "location": "Benowo Trade Center (BTC, Jl. Raya Ngasinan No.27",
+        "image": "/images/explore/lifestyle/4.png"
+    },
+    {
+        "name": "Q-Life Klinik",
+        "location": "Ruko Villa bukit Mas Re-8, Jl. KH Abdul Wahab Siamin"
+    },
+    {
+        "name": "DFG Dental",
+        "location": " Jl. Barata Jaya XV No.16, Surabaya "
+    },
+    {
+        "name": "Hewania 2",
+        "location": "Jl. Darmo Baru Barat XII No. 67, Surabaya"
+    },
+    {
+        "name": "Adara Attire",
+        "location": "Jl. Dukuh Kupang Bar. II No.26-28, Surabaya"
+    },
+    {
+        "name": "21- Studio",
+        "location": "Jl. Klampis Harapan Blok G-1BA, Surabaya"
+    },
+    {
+        "name": "SYGMA Dental Clinic",
+        "location": "Taman Paris Ruko, Jl. Puri Surya Jaya No. A2-02"
+    },
+    {
+        "name": "Jess Beauty Blessed",
+        "location": "Pakuwon Trade Center (PTC) Lt. G, Unit D5."
+    },
+    {
+        "name": "Laundry Pelangi UPN",
+        "location": "Jl. Raya No. 18, Medokan Ayu, Surabaya"
+    },
+    {
+        "name": "MBA Dental Care",
+        "location": "Jl. Jagiran no.2, Pacar Keling, Surabaya"
+    },
+    {
+        "name": "MOI Shopaholic",
+        "location": "Maspion Square Lt.Dasar Blok G20, Surabaya"
+    },
+    {
+        "name": "Rumah Katun Surabaya",
+        "location": "Jl. Mayjend HR. Muhammad No.73A, Surabaya"
+    },
+    {
+        "name": "Benefitness",
+        "location": "Jl. Dukuh Kupang Timur 19, No.72, Surabaya"
+    },
+    {
+        "name": "Sun Power Ceramics",
+        "location": "Kawasan Ngoro Industri Persada Blok R2A, Mojokerto"
+    },
+    {
+        "name": "Ginza Professional Salon",
+        "location": "Jl. Raya Rungkut Mapan FA 6, Surabaya"
+    },
+    {
+        "name": "Authen Kick",
+        "location": "Beyond Market, Surabaya Convention Center, PTC"
+    },
+    {
+        "name": "Benayu Center",
+        "location": "Park Royal Regency Block C3 No.19, Sidoarjo"
+    }
+]

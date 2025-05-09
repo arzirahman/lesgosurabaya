@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Jayaland",
+        "location": "Ruko Puncak Bukit Golf, Blok RBZ",
+        "image": "/images/explore/hospital/1.jpg"
+    },
+    {
+        "name": "The Capital Hotel",
+        "location": "Jl. Raya Jemursari no.258, Surabaya",
+        "image": "/images/explore/hospital/2.jpg"
+    },
+    {
+        "name": "Dafam Pacific Caesar",
+        "location": "Jl. Dr.IR. Soekarno, No.45C, Surabaya",
+        "image": "/images/explore/hospital/3.jpg"
+    },
+    {
+        "name": "News Hotel",
+       "location": "Jl. Pondok Maspion No.1, Sidoarjo",
+        "image": "/images/explore/hospital/4.jpg"
+    },
+    {
+        "name": "Mahameru Regency",
+        "location": "Taman Dhika Sidoarjo Kota"
+    },
+    {
+        "name": "Taman Melati Surabaya",
+        "location": " Jl. Barata Jaya XV No.16, Surabaya"
+    },
+    {
+        "name": "Nugas Space",
+        "location": "Perum Bumi Marina Emas Blok F, No.19, Surabaya"
+    },
+    {
+        "name": "Hive Five",
+        "location": "Jl. Dukuh Kupang Bar. II No.26-28, Surabaya"
+    },
+    {
+        "name": "Villa De Vera Batu",
+        "location": "Perumahan Habitat, No.015, Kota Batu"
+    },
+    {
+        "name": "Nordic Cluster Oslo",
+        "location": "Nordic Cluster Oslo, Puri Surya Jaya"
+    },
+    {
+        "name": "Nayta Hotel",
+        "location": "Jl. Bypass Ngurah Rai, No.9, Surabaya."
+    },
+    {
+        "name": "Zio Homestay Syariah",
+        "location": "Jl. Gayung Kebonsari Timur No.27, Surabaya"
+    }
+]

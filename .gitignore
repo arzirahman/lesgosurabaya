@@ -1,0 +1,11 @@
+node_modules
+
+.env
+
+dist
+
+api/node_modules
+
+api/generated
+
+web/public/images
