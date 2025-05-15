@@ -272,7 +272,7 @@ export const exploreDetail: IExploreDetailList = {
             <iframe title="WIBAJUL" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.550833190164!2d112.75727927586134!3d-7.2918339927156435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbb1dcd314a9%3A0xc5741c054ec9b00e!2sWIBAJUL%20(Warung%20Mie%20BangLades%20Ajul)!5e0!3m2!1sid!2sid!4v1746716758237!5m2!1sid!2sid" width="600" height="336" style={{ border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         ),
         "pictures": [
-            "/images/explore/umkm/1.png",
+            "/images/explore/umkm/2.png",
             "/images/explore/umkm/wibajul/1.jpg",
             "/images/explore/umkm/wibajul/2.jpg",
             "/images/explore/umkm/wibajul/3.png",

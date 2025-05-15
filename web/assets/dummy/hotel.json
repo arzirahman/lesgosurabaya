@@ -2,34 +2,41 @@
     {
         "name": "Jayaland",
         "location": "Ruko Puncak Bukit Golf, Blok RBZ",
-        "image": "/images/explore/hospital/1.jpg"
+        "image": "/images/explore/hospital/1.jpg",
+        "detail": true
     },
     {
         "name": "The Capital Hotel",
         "location": "Jl. Raya Jemursari no.258, Surabaya",
-        "image": "/images/explore/hospital/2.jpg"
+        "image": "/images/explore/hospital/2.jpg",
+        "detail": true
     },
     {
         "name": "Dafam Pacific Caesar",
         "location": "Jl. Dr.IR. Soekarno, No.45C, Surabaya",
-        "image": "/images/explore/hospital/3.jpg"
+        "image": "/images/explore/hospital/3.jpg",
+        "detail": true
     },
     {
         "name": "News Hotel",
-       "location": "Jl. Pondok Maspion No.1, Sidoarjo",
-        "image": "/images/explore/hospital/4.jpg"
+        "location": "Jl. Pondok Maspion No.1, Sidoarjo",
+        "image": "/images/explore/hospital/4.jpg",
+        "detail": true
     },
     {
         "name": "Mahameru Regency",
-        "location": "Taman Dhika Sidoarjo Kota"
+        "location": "Taman Dhika Sidoarjo Kota",
+        "image": "/images/explore/hospital/5.png"
     },
     {
         "name": "Taman Melati Surabaya",
-        "location": " Jl. Barata Jaya XV No.16, Surabaya"
+        "location": " Jl. Barata Jaya XV No.16, Surabaya",
+        "image": "/images/explore/hospital/6.png"
     },
     {
         "name": "Nugas Space",
-        "location": "Perum Bumi Marina Emas Blok F, No.19, Surabaya"
+        "location": "Perum Bumi Marina Emas Blok F, No.19, Surabaya",
+        "image": "/images/explore/hospital/7.jpg"
     },
     {
         "name": "Hive Five",
@@ -37,11 +44,13 @@
     },
     {
         "name": "Villa De Vera Batu",
-        "location": "Perumahan Habitat, No.015, Kota Batu"
+        "location": "Perumahan Habitat, No.015, Kota Batu",
+        "image": "/images/explore/hospital/9.webp"
     },
     {
         "name": "Nordic Cluster Oslo",
-        "location": "Nordic Cluster Oslo, Puri Surya Jaya"
+        "location": "Nordic Cluster Oslo, Puri Surya Jaya",
+        "image": "/images/explore/hospital/10.jpg"
     },
     {
         "name": "Nayta Hotel",
@@ -49,6 +58,7 @@
     },
     {
         "name": "Zio Homestay Syariah",
-        "location": "Jl. Gayung Kebonsari Timur No.27, Surabaya"
+        "location": "Jl. Gayung Kebonsari Timur No.27, Surabaya",
+        "image": "/images/explore/hospital/12.webp"
     }
 ]

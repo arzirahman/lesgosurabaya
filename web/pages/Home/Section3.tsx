@@ -56,7 +56,7 @@ export default function Section3() {
                 <div className='flex flex-col gap-[70px]'>
                     <div className='flex gap-[55px] mx-auto items-center'>
                         <span className='font-extrabold text-[80px] leading-[76px] text-shadow-lg'>Event & Bazar</span>
-                        <Link to={'/event'} className='flex rounded-[20px] gap-3 ml-6 px-4 py-3 items-center border-[3px] w-[420px] justify-between h-[69px] border-black font-bold text-2xl cursor-pointer'>
+                        <Link to={'/event'} className='flex rounded-[20px] gap-3 ml-6 px-4 py-3 items-center border-[3px] w-[420px] justify-between h-[69px] border-black font-bold text-2xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 active:scale-100'>
                             Explore all Event
                             <svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M25.169 6H1.68512" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

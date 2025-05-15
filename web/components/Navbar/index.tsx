@@ -62,7 +62,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className='fixed inset-0 h-[100px] z-10 w-full bg-[rgba(0,0,0,0.5)] rounded-b-[40px]'>
+        <nav className='fixed inset-0 h-[100px] z-10 w-full bg-[rgba(0,0,0,0.8)] rounded-b-[40px]'>
             <div className='w-full max-w-[1440px] mx-auto flex justify-between items-center'>
                 <Link to={'/'} className='pb-6 pt-4 px-10'>
                     <img alt='Lesgosurabaya' src={Logo} />

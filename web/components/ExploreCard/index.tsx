@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 import { request } from "../../utils/request";
 import Cookies from 'js-cookie';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export interface IExploreCard {
     image?: string;
     name?: string;
     location?: string;
     imageClassName?: string;
+    detail?: boolean;
 }
 
-export default function ExploreCard({ image, name, location, imageClassName }: Readonly<IExploreCard>) {
+export default function ExploreCard({ image, name, location, imageClassName, detail }: Readonly<IExploreCard>) {
     const [isLoading, setIsLoading] = useState(true);
     const [like, setLike] = useState(false);
     const [favourite, setFavourite] = useState(false);
+    const loc = useLocation();
 
     const toggleLike = async () => {
         const token = Cookies.get('lesgosurabaya') ?? null;
@@ -75,7 +77,7 @@ export default function ExploreCard({ image, name, location, imageClassName }: R
 
     return (
         <div>
-            <Link to={image ? `/explore/detail/${name}` : '#'} className="flex flex-col flex-1 gap-[20px] cursor-pointer">
+            <Link to={detail ? `/explore/detail/${name}` : (loc.pathname + loc.search)} className="flex flex-col flex-1 gap-[20px] cursor-pointer group">
                 <div className="rounded-[20px] h-[365px] w-full flex justify-end relative overflow-hidden bg-[#CFCFCF]">
                     {isLoading && image && (
                         <div className="absolute w-full h-full bg-[#CFCFCF] animate-pulse" />
@@ -83,7 +85,7 @@ export default function ExploreCard({ image, name, location, imageClassName }: R
                     {image && <img
                         alt=""
                         src={image}
-                        className={`${imageClassName ?? 'absolute w-full h-full object-cover object-center'} transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+                        className={`${imageClassName ?? 'absolute w-full h-full object-cover object-center'} group-hover:scale-110 ease-in-out transition-all duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
                         onLoad={() => setIsLoading(false)}
                         onError={() => setIsLoading(false)}
                     />}

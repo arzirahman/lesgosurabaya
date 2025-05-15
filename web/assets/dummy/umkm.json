@@ -2,66 +2,81 @@
     {
         "name": "Kedai Doa Ibu",
         "location": "Jl. Kaliwaron No. 60, Mojo, Surabaya",
-        "image": "/images/explore/umkm/1.png"
+        "image": "/images/explore/umkm/1.png",
+        "detail": true
     },
     {
         "name": "WIBAJUL",
         "location": "Jl. Ngagel Jaya Tengah No.96, Surabaya",
-        "image": "/images/explore/umkm/2.png"
+        "image": "/images/explore/umkm/2.png",
+        "detail": true
     },
     {
         "name": "Mie Babat Jembatan Asli",
         "location": "Bu Cokro, Jl. Dharmahusada No.190",
-        "image": "/images/explore/umkm/3.jpg"
+        "image": "/images/explore/umkm/3.jpg",
+        "detail": true
     },
     {
         "name": "Seblak Kak Ross",
         "location": "Jl. Pakal Madya Barat No.74, Surabaya",
-        "image": "/images/explore/umkm/4.png"
+        "image": "/images/explore/umkm/4.png",
+        "detail": true
     },
     {
         "name": "Gudeg Jogja Bu Ndari",
-        "location": "Hollywood Surabaya, Jl. Ahmad Yani No.73"
+        "location": "Hollywood Surabaya, Jl. Ahmad Yani No.73",
+        "image": "/images/explore/umkm/5.jpg"
     },
     {
         "name": "Bebek Mbok Ndower",
-        "location": " Jl. Barata Jaya XX No.97, Surabaya "
+        "location": " Jl. Barata Jaya XX No.97, Surabaya ",
+        "image": "/images/explore/umkm/6.webp"
     },
     {
         "name": "Nyamuda",
-        "location": "Jl. Darmo Permai sel XI No.18, Surabaya"
+        "location": "Jl. Darmo Permai sel XI No.18, Surabaya",
+        "image": "/images/explore/umkm/7.png"
     },
     {
         "name": "Sego Meduro",
-        "location": "Jl. Demak No.304, Surabaya"
+        "location": "Jl. Demak No.304, Surabaya",
+        "image": "/images/explore/umkm/8.jpg"
     },
     {
         "name": "Tilli Corner",
-        "location": "Based on Surabaya (By Appointment)"
+        "location": "Based on Surabaya (By Appointment)",
+        "image": "/images/explore/umkm/9.webp"
     },
     {
         "name": "Chibiz",
-        "location": "Citywalk Pakuwon City Mall (PCM), Surabaya"
+        "location": "Citywalk Pakuwon City Mall (PCM), Surabaya",
+        "image": "/images/explore/umkm/10.jpg"
     },
     {
         "name": "The Corner Hub",
-        "location": "Dharmahusada Indah Blok C No.46, Surabaya"
+        "location": "Dharmahusada Indah Blok C No.46, Surabaya",
+        "image": "/images/explore/umkm/11.png"
     },
     {
         "name": "Aku Suka Makanan Jepang",
-        "location": "Jl. Siwalankerto No.241, Surabaya"
+        "location": "Jl. Siwalankerto No.241, Surabaya",
+        "image": "/images/explore/umkm/12.png"
     },
     {
         "name": "Bakso Bang Disko",
-        "location": "Jl. Pasar Kembang No. 76, Surabaya"
+        "location": "Jl. Pasar Kembang No. 76, Surabaya",
+        "image": "/images/explore/umkm/13.jpg"
     },
     {
         "name": "Sego Meduro",
-        "location": "Jl. Demak No.304, Surabaya"
+        "location": "Jl. Demak No.304, Surabaya",
+        "image": "/images/explore/umkm/8.jpg"
     },
     {
         "name": "Hok Mien",
-        "location": "Jl. Karang Empat Besar No.958, Surabaya"
+        "location": "Jl. Karang Empat Besar No.958, Surabaya",
+        "image": "/images/explore/umkm/15.jpg"
     },
     {
         "name": "Pari Bendo Lawang",
@@ -69,18 +84,22 @@
     },
     {
         "name": "Dapur Maya",
-        "location": " DTC Wonokromo (Lt.4), Surabaya"
+        "location": " DTC Wonokromo (Lt.4), Surabaya",
+        "image": "/images/explore/umkm/17.webp"
     },
     {
         "name": "Bebek Semangat",
-        "location": "Tunjungan Plaza 2, Lt.5, Surabaya"
+        "location": "Tunjungan Plaza 2, Lt.5, Surabaya",
+        "image": "/images/explore/umkm/18.heic"
     },
     {
         "name": "Bakso Putra Mantep",
-        "location": "Jl. Kenjeran 484, Surabaya"
+        "location": "Jl. Kenjeran 484, Surabaya",
+        "image": "/images/explore/umkm/19.jpg"
     },
     {
         "name": "Sambal Hot Mbak Lina",
-        "location": "Jl. Raya Klakah Rejo No.20, Surabaya"
+        "location": "Jl. Raya Klakah Rejo No.20, Surabaya",
+        "image": "/images/explore/umkm/20.jpeg"
     }
 ]

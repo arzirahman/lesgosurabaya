@@ -2,62 +2,76 @@
     {
         "name": "Drift.inc",
         "location": "Jl. Kaliwaron No. 60, Mojo, Surabaya",
-        "image": "/images/explore/wisata/1.jpg"
+        "image": "/images/explore/wisata/1.jpg",
+        "detail": true
     },
     {
         "name": "BYEBELI",
         "location": "Jl. Raya Palm Hill No.K8/12, Surabaya",
-        "image": "/images/explore/wisata/2.jpg"
+        "image": "/images/explore/wisata/2.jpg",
+        "detail": true
     },
     {
         "name": "Dreamfield Tactical",
         "location": "The Central Mall, Floor 2,Jl. Tidar, Surabaya",
-        "image": "/images/explore/wisata/3.png"
+        "image": "/images/explore/wisata/3.png",
+        "detail": true
     },
     {
         "name": "The Ramoe",
         "location": "Excotel Surabaya, Jl. Ahmad Yani No. 119",
-        "image": "/images/explore/wisata/4.png"
+        "image": "/images/explore/wisata/4.png",
+        "detail": true
     },
     {
         "name": "Kommafuku",
-        "location": "2nd Floor of Locaahanos Dining Club, Jl. Jawa No.6"
+        "location": "2nd Floor of Locaahanos Dining Club, Jl. Jawa No.6",
+        "image": "/images/explore/wisata/5.jpg"
     },
     {
         "name": "Mang Engking",
-        "location": "Jl. Gubeng Masjid, Pasar Keling, Surabaya"
+        "location": "Jl. Gubeng Masjid, Pasar Keling, Surabaya",
+        "image": "/images/explore/wisata/6.heic"
     },
     {
         "name": "The Wolves",
-        "location": "Ruko Margoraya, Jl. Raya Margorejo Indah No. 115"
+        "location": "Ruko Margoraya, Jl. Raya Margorejo Indah No. 115",
+        "image": "/images/explore/wisata/7.jpg"
     },
     {
         "name": "Steak Industry",
-        "location": "Jl. Nias No. 140, Surabaya"
+        "location": "Jl. Nias No. 140, Surabaya",
+        "image": "/images/explore/wisata/8.jpg"
     },
     {
         "name": "Yamie Panda",
-        "location": "Studio Food Court, Lt.1, Pakuwon Mall Surabaya"
+        "location": "Studio Food Court, Lt.1, Pakuwon Mall Surabaya",
+        "image": "/images/explore/wisata/9.webp"
     },
     {
         "name": "Cafe Balek Kampoeng",
-        "location": "Jl. Genteng Besar No. 83C, Surabaya"
+        "location": "Jl. Genteng Besar No. 83C, Surabaya",
+        "image": "/images/explore/wisata/10.jpg"
     },
     {
         "name": "Warung Apung SDA",
-        "location": "Jl. Sunandar Priyo Sudarmo No.20-22, Sidoarjo"
+        "location": "Jl. Sunandar Priyo Sudarmo No.20-22, Sidoarjo",
+        "image": "/images/explore/wisata/11.webp"
     },
     {
         "name": "Smoke House and Coffee",
-        "location": "Jl. Taman Ketampon No. 75-76, Surabaya"
+        "location": "Jl. Taman Ketampon No. 75-76, Surabaya",
+        "image": "/images/explore/wisata/12.jpg"
     },
     {
         "name": "Nyamuda",
-        "location": "Jl. Darmo Permai Sel. XI No.18, Surabaya"
+        "location": "Jl. Darmo Permai Sel. XI No.18, Surabaya",
+        "image": "/images/explore/wisata/13.png"
     },
     {
         "name": "Teazzi",
-        "location": "Pakuwon City Mall 2, Jl. Raya Laguna KJW Putih"
+        "location": "Pakuwon City Mall 2, Jl. Raya Laguna KJW Putih",
+        "image": "/images/explore/wisata/14.jpg"
     },
     {
         "name": "Ayam Geprek Dotuman",
@@ -65,15 +79,18 @@
     },
     {
         "name": "Pari Bendo Lawang",
-        "location": "Jl. Argotirto No. 24, Malang"
+        "location": "Jl. Argotirto No. 24, Malang",
+        "image": "/images/explore/wisata/16.jpg"
     },
     {
         "name": "Ebisu Japanese Restaurant",
-        "location": "Jl. Raya Darmo 68-78, Surabaya"
+        "location": "Jl. Raya Darmo 68-78, Surabaya",
+        "image": "/images/explore/wisata/17.jpg"
     },
     {
         "name": "The Kenthangs",
-        "location": "Royal Plaza Lt. G, Surabaya"
+        "location": "Royal Plaza Lt. G, Surabaya",
+        "image": "/images/explore/wisata/18.jpg"
     },
     {
         "name": "Roti Srikaya Agogo",
@@ -81,6 +98,7 @@
     },
     {
         "name": "Rumah Hantu Kota Lama",
-        "location": "Jl. Rajawali No. 47, Kota Lama, Surabaya"
+        "location": "Jl. Rajawali No. 47, Kota Lama, Surabaya",
+        "image": "/images/explore/wisata/20.png"
     }
 ]

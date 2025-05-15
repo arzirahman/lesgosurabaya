@@ -16,7 +16,7 @@ export default function Section2() {
                 <div className='text-black flex flex-col'>
                     <span className='mb-[17px] font-bold text-[64px] leading-[76px] text-shadow-lg'>Discover Unique UMKM in Surabaya</span>
                     <span className='font-semibold text-xl mb-[72px]'>Explore Surabaya's creative side through its unique UMKM - from handmade crafts to flavorful local treats, all with personal touch</span>
-                    <Link to={'/explore/umkm'} className='flex rounded-[20px] gap-3 ml-6 px-4 py-3 h-[69px] items-center border-[3px] border-black font-bold text-2xl max-w-[540px] cursor-pointer'>
+                    <Link to={'/explore/umkm'} className='flex rounded-[20px] gap-3 ml-6 px-4 py-3 h-[69px] items-center border-[3px] border-black font-bold text-2xl max-w-[540px] cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 active:scale-100'>
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.91998 16H28.92" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M2.91998 16L6.91998 21" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

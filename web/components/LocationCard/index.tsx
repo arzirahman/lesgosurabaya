@@ -9,8 +9,8 @@ interface ILocationCard {
 
 export default function LocationCard({ name, image, location, path }: Readonly<ILocationCard>) {
     return (
-        <Link to={path} className="rounded-[20px] w-[310px] h-[577px] overflow-hidden relative text-white">
-            <img alt="Kedai Do'a Ibu" src={image} className="w-full h-full object-cover object-center" />
+        <Link to={path} className="rounded-[20px] w-[310px] h-[577px] overflow-hidden relative text-white group">
+            <img alt="Kedai Do'a Ibu" src={image} className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-110 ease-in-out" />
             <div className="absolute flex flex-col left-4 bottom-5">
                 <span className="font-extrabold text-2xl">{name}</span>
                 <div className="flex gap-[6px] items-center">
