@@ -20,19 +20,23 @@ model User {
 }
 
 model Like {
-  id    Int    @id @default(autoincrement())
-  post  String
-  email String
-  image String
-  user  User   @relation(fields: [email], references: [email], onDelete: Cascade)
+  id        Int     @id @default(autoincrement())
+  post      String
+  email     String
+  image     String
+  hasDetail Boolean @default(false)
+  isEvent   Boolean @default(false)
+  user      User    @relation(fields: [email], references: [email], onDelete: Cascade)
 }
 
 model Favourite {
-  id    Int    @id @default(autoincrement())
-  post  String
-  email String
-  image String
-  user  User   @relation(fields: [email], references: [email], onDelete: Cascade)
+  id        Int     @id @default(autoincrement())
+  post      String
+  email     String
+  image     String
+  hasDetail Boolean @default(false)
+  isEvent   Boolean @default(false)
+  user      User    @relation(fields: [email], references: [email], onDelete: Cascade)
 }
 
 model Comment {

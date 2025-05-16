@@ -75,7 +75,8 @@
     },
     {
         "name": "Ayam Geprek Dotuman",
-        "location": "Tunjungan Plaza Surabaya"
+        "location": "Tunjungan Plaza Surabaya",
+        "image": "/images/explore/wisata/15.webp"
     },
     {
         "name": "Pari Bendo Lawang",
@@ -94,7 +95,8 @@
     },
     {
         "name": "Roti Srikaya Agogo",
-        "location": "Gwalk Taman Gapura FG-5, Surabaya"
+        "location": "Gwalk Taman Gapura FG-5, Surabaya",
+        "image": "/images/explore/wisata/19.webp"
     },
     {
         "name": "Rumah Hantu Kota Lama",

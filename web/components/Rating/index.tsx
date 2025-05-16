@@ -28,7 +28,7 @@ const Rating: React.FC<IRating> = ({
             >
                 <svg
                     viewBox="0 0 29 29"
-                    fill="#A5A5A5"
+                    fill="#C8C5C5"
                     width="100%"
                     height="100%"
                     style={{ position: 'absolute', top: 0, left: 0 }}

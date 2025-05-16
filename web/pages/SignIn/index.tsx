@@ -30,7 +30,13 @@ export default function SignIn() {
             setLoading(true);
             try {
                 const response = await request().post("/sign-in", data);
-                Cookies.set('lesgosurabaya', response.data.data.token, { expires: 30, path: '/' });
+                Cookies.set('lesgosurabaya', response.data.data.token, {
+                    expires: 30,
+                    path: '/',
+                    domain: import.meta.env.VITE_COOKIE_DOMAIN,
+                    secure: import.meta.env.VITE_COOKIE_SECURE === 'true',
+                    sameSite: 'Lax'
+                });
                 navigate('/');
                 dispatch(setAlert({ type: 'success', message: 'Login success', visibility: true }));
             } catch (error: unknown) {

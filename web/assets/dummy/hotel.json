@@ -40,7 +40,8 @@
     },
     {
         "name": "Hive Five",
-        "location": "Jl. Dukuh Kupang Bar. II No.26-28, Surabaya"
+        "location": "Jl. Dukuh Kupang Bar. II No.26-28, Surabaya",
+        "image": "/images/explore/hospital/8.webp"
     },
     {
         "name": "Villa De Vera Batu",
@@ -54,7 +55,8 @@
     },
     {
         "name": "Nayta Hotel",
-        "location": "Jl. Bypass Ngurah Rai, No.9, Surabaya."
+        "location": "Jl. Bypass Ngurah Rai, No.9, Surabaya.",
+        "image": "/images/explore/hospital/11.webp"
     },
     {
         "name": "Zio Homestay Syariah",

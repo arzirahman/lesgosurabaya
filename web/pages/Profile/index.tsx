@@ -2,13 +2,14 @@ import { useEffect, useState } from "react"
 import Cookies from 'js-cookie';
 import { request } from "../../utils/request";
 import background from '../../assets/images/home/section2/background.png';
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Profile() {
     const [isFavourite, setIsFavourite] = useState(true);
     const [data, setData] = useState<any>();
     const [profile, setProfile] = useState<string>();
     const navigate = useNavigate();
+    const loc = useLocation();
 
     useEffect(() => {
         const getFavouriteAndLike = async () => {
@@ -80,14 +81,14 @@ export default function Profile() {
                     {
                         isFavourite
                             ? data?.favourite?.map((favourite: any) => (
-                                <div key={`profile-${favourite?.id}`} className="rounded-[20px] max-w-[310px] min-w-[310px] h-[365px] bg-[#CDCDCD] relative overflow-hidden">
-                                    {favourite?.image && <img alt={`profile-${favourite?.id}`} src={favourite?.image} className="w-full h-full object-cover object-center" />}
-                                </div>
+                                <Link to={favourite.hasDetail ? `/explore/detail/${favourite.post}` : (loc.pathname + loc.search)} key={`profile-${favourite?.id}`} className="group rounded-[20px] max-w-[310px] min-w-[310px] h-[365px] bg-[#CDCDCD] relative overflow-hidden">
+                                    {favourite?.image && <img alt={`profile-${favourite?.id}`} src={favourite?.image} className="w-full h-full object-cover object-center group-hover:scale-110 ease-in-out transition-all duration-500" />}
+                                </Link>
                             ))
                             : data?.like?.map((like: any) => (
-                                <div key={`profile-${like?.id}`} className="rounded-[20px] max-w-[310px] min-w-[310px] h-[365px] bg-[#CDCDCD] relative overflow-hidden">
-                                    {like?.image && <img alt={`profile-${like?.id}`} src={like?.image} className="w-full h-full object-cover object-center" />}
-                                </div>
+                                <Link to={like.hasDetail ? `/explore/detail/${like.post}` : (loc.pathname + loc.search)} key={`profile-${like?.id}`} className="group rounded-[20px] max-w-[310px] min-w-[310px] h-[365px] bg-[#CDCDCD] relative overflow-hidden">
+                                    {like?.image && <img alt={`profile-${like?.id}`} src={like?.image} className="w-full h-full object-cover object-center group-hover:scale-110 ease-in-out transition-all duration-500" />}
+                                </Link>
                             ))
                     }
                 </div>

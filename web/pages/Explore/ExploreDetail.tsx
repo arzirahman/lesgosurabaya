@@ -76,7 +76,7 @@ export default function ExploreDetail() {
                 <div className="flex-1 flex flex-col">
                     <div className="flex items-center font-extrabold text-[48px] leading-[76px] gap-[30px]">
                         <span>{details.name}</span>
-                        <div className="rounded-[20px] bg-[#D9D9D9] w-[222px] h-[57px] flex items-center px-[12px] justify-between">
+                        <div className="rounded-[20px] bg-black w-[222px] h-[57px] flex items-center px-[12px] justify-between">
                             <Rating rating={2.5} size={30} />
                         </div>
                     </div>

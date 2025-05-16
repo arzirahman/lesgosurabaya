@@ -6,7 +6,7 @@ import { FavouroteAndLikeResponse, ToggleFavouriteResponse, ToggleLikeResponse }
 
 export async function toggleLike(req: AuthenticatedRequest<ToggleLikeRequest>, res: Response, next: NextFunction) {
     try {
-        const { post, image } = req.body;
+        const { post, image, hasDetail, isEvent } = req.body;
         const email = req.data?.email ?? '';
 
         const existingLike = await prisma.like.findFirst({
@@ -34,7 +34,9 @@ export async function toggleLike(req: AuthenticatedRequest<ToggleLikeRequest>, r
                 data: {
                     post,
                     email,
-                    image
+                    image,
+                    hasDetail: hasDetail ?? false,
+                    isEvent: isEvent ?? false
                 },
             });
             response.data = {
@@ -82,7 +84,7 @@ export async function isLike(req: AuthenticatedRequest<ToggleLikeRequest>, res: 
 
 export async function toggleFavourite(req: AuthenticatedRequest<ToggleFavouriteRequest>, res: Response, next: NextFunction) {
     try {
-        const { post, image } = req.body;
+        const { post, image, hasDetail, isEvent } = req.body;
         const email = req.data?.email ?? '';
 
         const existingFavourite = await prisma.favourite.findFirst({
@@ -110,7 +112,9 @@ export async function toggleFavourite(req: AuthenticatedRequest<ToggleFavouriteR
                 data: {
                     post,
                     email,
-                    image
+                    image,
+                    hasDetail: hasDetail ?? false,
+                    isEvent: isEvent ?? false
                 },
             });
             response.data = {

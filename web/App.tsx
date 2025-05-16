@@ -14,6 +14,7 @@ const ExploreDetail = lazy(() => import('./pages/Explore/ExploreDetail'));
 const SignUp = lazy(() => import('./pages/SignUp'));
 const SignIn = lazy(() => import('./pages/SignIn'));
 const Profile = lazy(() => import('./pages/Profile'));
+const LearnMore = lazy(() => import('./pages/LearnMore'));
 
 const App = () => {
   return (
@@ -38,6 +39,11 @@ const App = () => {
           <Route path="/event" element={
             <Suspense fallback={<Loading />}>
               <Event />
+            </Suspense>
+          } />
+          <Route path="/learn-more" element={
+            <Suspense fallback={<Loading />}>
+              <LearnMore />
             </Suspense>
           } />
           <Route path="/explore" element={

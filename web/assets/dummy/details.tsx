@@ -550,7 +550,7 @@ export const exploreDetail: IExploreDetailList = {
         ],
         "highlight": {
             "type": "video",
-            "url": "/images/explore/lifestyle/katha/6.mp4",
+            "url": "/images/explore/lifestyle/katha/5.mp4",
         }
     },
     "Fifa Gym": {
