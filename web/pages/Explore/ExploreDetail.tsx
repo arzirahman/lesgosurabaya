@@ -4,6 +4,7 @@ import AccordionDetail, { IAccordionDetail } from "../../components/AccordionDet
 import Footer from "../../components/Footer";
 import { exploreDetail } from "../../assets/dummy/details";
 import { useEffect } from "react";
+import Comment from "../../components/Comment";
 
 export default function ExploreDetail() {
     const { name } = useParams<{ name: string }>();
@@ -136,6 +137,7 @@ export default function ExploreDetail() {
                     </div>
                 </div>
             </div>
+            <Comment post={name} />
             <Footer />
         </div>
     )

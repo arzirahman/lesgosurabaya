@@ -9,9 +9,10 @@ export interface IExploreCard {
     location?: string;
     imageClassName?: string;
     detail?: boolean;
+    isEvent?: boolean;
 }
 
-export default function ExploreCard({ image, name, location, imageClassName, detail }: Readonly<IExploreCard>) {
+export default function ExploreCard({ image, name, location, imageClassName, detail, isEvent = false }: Readonly<IExploreCard>) {
     const [isLoading, setIsLoading] = useState(true);
     const [like, setLike] = useState(false);
     const [favourite, setFavourite] = useState(false);
@@ -20,14 +21,15 @@ export default function ExploreCard({ image, name, location, imageClassName, det
 
     const toggleLike = async () => {
         const token = Cookies.get('lesgosurabaya') ?? null;
-        if (!token || !image) navigate('/sign-in');
+        if (!detail) return;
+        if (!token) navigate('/sign-in');
         setLike(!like);
         try {
             await request({ noLoading: true }).post("/like", {
                 post: name,
                 image,
                 hasDetail: detail,
-                isEvent: false
+                isEvent
             });
         } catch (error: unknown) {
             setLike(!like);
@@ -36,14 +38,15 @@ export default function ExploreCard({ image, name, location, imageClassName, det
 
     const toggleFavourite = async () => {
         const token = Cookies.get('lesgosurabaya') ?? null;
-        if (!token || !image) navigate('/sign-in');
+        if (!detail) return;
+        if (!token) navigate('/sign-in');
         setFavourite(!favourite);
         try {
             await request({ noLoading: true }).post("/favourite", {
                 post: name,
                 image,
                 hasDetail: detail,
-                isEvent: false
+                isEvent
             });
         } catch (error: unknown) {
             setFavourite(!favourite);
@@ -80,9 +83,19 @@ export default function ExploreCard({ image, name, location, imageClassName, det
         getFavourite();
     }, [])
 
+    let link: string = loc.pathname + loc.search;
+
+    if (detail) {
+        if (isEvent) {
+            link = `/event/${name}`;
+        } else {
+            link = `/explore/detail/${name}`;
+        }
+    }
+
     return (
         <div className="relative">
-            <Link to={detail ? `/explore/detail/${name}` : (loc.pathname + loc.search)} className="flex flex-col flex-1 gap-[20px] cursor-pointer group">
+            <Link to={link} className="flex flex-col flex-1 gap-[20px] cursor-pointer group">
                 <div className="rounded-[20px] h-[365px] w-full flex justify-end relative overflow-hidden bg-[#CFCFCF]">
                     {isLoading && image && (
                         <div className="absolute w-full h-full bg-[#CFCFCF] animate-pulse" />
@@ -101,7 +114,7 @@ export default function ExploreCard({ image, name, location, imageClassName, det
                     <span className="font-semibold text-sm text-center">{location}</span>
                 </div>
             </Link>
-            <div className={`flex flex-col items-end gap-[16px] p-[20px] absolute top-0 right-0 text-white z-[1] w-full rounded-[20px]`}>
+            <div className={`flex flex-col items-end gap-[16px] absolute top-[20px] right-[20px] text-white z-[1] rounded-[20px]`}>
                 <button onClick={toggleFavourite} className={`${favourite ? 'text-[#FFFF07]' : ''} mr-[2px] cursor-pointer`}>
                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 0C6.72903 0 0 6.72876 0 14.9994C0 23.2706 6.72903 30 15 30C23.271 30 30 23.2706 30 14.9994C30.0006 6.72876 23.2716 0 15 0ZM23.2879 13.9028L18.9455 17.0452L20.6179 22.1565C20.6445 22.2363 20.6584 22.3215 20.6584 22.4085C20.6584 22.855 20.2971 23.2175 19.8506 23.2175C19.6729 23.2175 19.5098 23.1607 19.3769 23.0646L15.0006 19.8993L10.6243 23.0646C10.4914 23.1607 10.3283 23.2175 10.1513 23.2175C9.70414 23.2175 9.34222 22.8556 9.34222 22.4085C9.34222 22.3209 9.35672 22.2363 9.38331 22.1565L11.0564 17.0452L6.71393 13.9034C6.51092 13.7572 6.3792 13.5179 6.3792 13.2485C6.3792 12.802 6.74051 12.4407 7.18763 12.4407H12.5632L14.2278 7.35288C14.3293 7.02239 14.6369 6.78193 15.0012 6.78193C15.3649 6.78193 15.6731 7.02239 15.774 7.35288L17.4386 12.4407H22.8142C23.2607 12.4407 23.6226 12.802 23.6226 13.2485C23.622 13.5179 23.4903 13.7566 23.2879 13.9028Z" fill="currentColor" />

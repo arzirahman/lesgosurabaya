@@ -11,3 +11,8 @@ export interface ToggleFavouriteRequest {
     hasDetail: boolean;
     isEvent: boolean;
 }
+
+export interface CommentRequest {
+    post: string;
+    description: string;
+}

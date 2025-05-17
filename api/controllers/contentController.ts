@@ -1,8 +1,9 @@
 import { NextFunction, Response } from "express";
 import prisma from "../utils/prisma";
-import { ToggleFavouriteRequest, ToggleLikeRequest } from "../dtos/requests/contentRequest";
+import { CommentRequest, ToggleFavouriteRequest, ToggleLikeRequest } from "../dtos/requests/contentRequest";
 import { AuthenticatedRequest } from "../dtos/requests/authenticateRequest";
 import { FavouroteAndLikeResponse, ToggleFavouriteResponse, ToggleLikeResponse } from "../dtos/responses/contentResponse";
+import { HttpResponse } from "../dtos/HttpResponse";
 
 export async function toggleLike(req: AuthenticatedRequest<ToggleLikeRequest>, res: Response, next: NextFunction) {
     try {
@@ -187,6 +188,66 @@ export async function favouriteAndLike(req: AuthenticatedRequest<any>, res: Resp
                     profile: user?.profile ?? ''
                 }
             }
+        };
+
+        res.json(response);
+    } catch (error: unknown) {
+        next(error);
+    }
+}
+
+export async function pushComment(req: AuthenticatedRequest<CommentRequest>, res: Response, next: NextFunction) {
+    try {
+        const email = req.data?.email ?? '';
+
+        await prisma.comment.create({
+            data: {
+                email: email,
+                post: req.body.post,
+                description: req.body.description
+            }
+        });
+
+        const response: HttpResponse<null> = {
+            status: 200,
+            message: "Success",
+            data: null
+        };
+
+        res.json(response);
+    } catch (error: unknown) {
+        next(error);
+    }
+}
+
+export async function getComment(req: AuthenticatedRequest<any>, res: Response, next: NextFunction) {
+    try {
+        const post = req.query.post ?? '';
+
+        const comments = await prisma.comment.findMany({
+            where: {
+                post: post as string
+            },
+            select: {
+                description: true,
+                createdAt: true,
+                id: true,
+                user: {
+                    select: {
+                        name: true,
+                        profile: true,
+                    }
+                }
+            },
+            orderBy: {
+                createdAt: 'desc'
+            }
+        })
+
+        const response: HttpResponse<any> = {
+            status: 200,
+            message: "Success",
+            data: comments
         };
 
         res.json(response);

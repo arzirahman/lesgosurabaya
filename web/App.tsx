@@ -7,6 +7,7 @@ const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Event = lazy(() => import('./pages/Event'));
+const EventDetail = lazy(() => import('./pages/Event/EventDetail'));
 const Explore = lazy(() => import('./pages/Explore'));
 const ExploreCategory = lazy(() => import('./pages/Explore/ExploreCategory'));
 const ExploreDetail = lazy(() => import('./pages/Explore/ExploreDetail'));
@@ -39,6 +40,11 @@ const App = () => {
           <Route path="/event" element={
             <Suspense fallback={<Loading />}>
               <Event />
+            </Suspense>
+          } />
+          <Route path="/event/:name" element={
+            <Suspense fallback={<Loading />}>
+              <EventDetail />
             </Suspense>
           } />
           <Route path="/learn-more" element={

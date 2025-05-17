@@ -44,8 +44,25 @@ export default function Profile() {
     }, [])
 
     const logout = () => {
-        Cookies.remove('lesgosurabaya');
+        Cookies.remove('lesgosurabaya', {
+            expires: 30,
+            path: '/',
+            domain: import.meta.env.VITE_COOKIE_DOMAIN,
+            secure: import.meta.env.VITE_COOKIE_SECURE === 'true',
+            sameSite: 'Lax'
+        });
         navigate('/');
+    }
+
+    const getLink = (name: string, detail: boolean, isEvent: boolean) => {
+        if (detail) {
+            if (isEvent) {
+                return `/event/${name}`;
+            } else {
+                return `/explore/detail/${name}`;
+            }
+        }
+        return loc.pathname + loc.search
     }
 
     return (
@@ -81,12 +98,12 @@ export default function Profile() {
                     {
                         isFavourite
                             ? data?.favourite?.map((favourite: any) => (
-                                <Link to={favourite.hasDetail ? `/explore/detail/${favourite.post}` : (loc.pathname + loc.search)} key={`profile-${favourite?.id}`} className="group rounded-[20px] max-w-[310px] min-w-[310px] h-[365px] bg-[#CDCDCD] relative overflow-hidden">
+                                <Link to={getLink(favourite.post, favourite.hasDetail, favourite.isEvent)} key={`profile-${favourite?.id}`} className="group rounded-[20px] max-w-[310px] min-w-[310px] h-[365px] bg-[#CDCDCD] relative overflow-hidden">
                                     {favourite?.image && <img alt={`profile-${favourite?.id}`} src={favourite?.image} className="w-full h-full object-cover object-center group-hover:scale-110 ease-in-out transition-all duration-500" />}
                                 </Link>
                             ))
                             : data?.like?.map((like: any) => (
-                                <Link to={like.hasDetail ? `/explore/detail/${like.post}` : (loc.pathname + loc.search)} key={`profile-${like?.id}`} className="group rounded-[20px] max-w-[310px] min-w-[310px] h-[365px] bg-[#CDCDCD] relative overflow-hidden">
+                                <Link to={getLink(like.post, like.hasDetail, like.isEvent)} key={`profile-${like?.id}`} className="group rounded-[20px] max-w-[310px] min-w-[310px] h-[365px] bg-[#CDCDCD] relative overflow-hidden">
                                     {like?.image && <img alt={`profile-${like?.id}`} src={like?.image} className="w-full h-full object-cover object-center group-hover:scale-110 ease-in-out transition-all duration-500" />}
                                 </Link>
                             ))
