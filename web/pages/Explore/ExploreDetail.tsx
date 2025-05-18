@@ -1,18 +1,65 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Rating from "../../components/Rating";
 import AccordionDetail, { IAccordionDetail } from "../../components/AccordionDetail";
 import Footer from "../../components/Footer";
 import { exploreDetail } from "../../assets/dummy/details";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Comment from "../../components/Comment";
+import Cookies from 'js-cookie';
+import { request } from "../../utils/request";
 
 export default function ExploreDetail() {
     const { name } = useParams<{ name: string }>();
     const details = exploreDetail[name as any];
+    const [rate, setRate] = useState(0);
+    const [summaryRate, setSummaryRate] = useState<{
+        average: number,
+        total: number,
+        profiles: (string | null)[],
+    }>();
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    });
+        getSummaryRate();
+    }, []);
+
+    useEffect(() => {
+        const getRate = async () => {
+            const token = Cookies.get('lesgosurabaya') ?? null;
+            if (!token) return;
+            try {
+                const response = await request().get(`/rate?post=${name}`);
+                setRate(response.data.data);
+            } catch (error: unknown) { }
+        }
+
+        getRate();
+    }, []);
+
+    const getSummaryRate = useCallback(async () => {
+        try {
+            const response = await request().get(`/summary-rate?post=${name}`);
+            setSummaryRate(response.data.data);
+        } catch (error: unknown) { }
+    }, [name]);
+
+    const pushRate = async (value: number) => {
+        const token = Cookies.get('lesgosurabaya') ?? null;
+        if (!token) return navigate('/sign-in');
+        const currentRate = rate
+        setRate(value);
+        try {
+            await request({ noLoading: true }).post("/rate", {
+                rate: value,
+                post: name
+            });
+            getSummaryRate();
+        } catch (error: unknown) {
+            setRate(currentRate)
+        }
+    };
 
     const accordion: IAccordionDetail[] = [
         {
@@ -78,7 +125,7 @@ export default function ExploreDetail() {
                     <div className="flex items-center font-extrabold text-[48px] leading-[76px] gap-[30px]">
                         <span>{details.name}</span>
                         <div className="rounded-[20px] bg-black w-[222px] h-[57px] flex items-center px-[12px] justify-between">
-                            <Rating rating={2.5} size={30} />
+                            <Rating rating={rate ?? 0} size={30} onRate={(value) => { pushRate(value) }} />
                         </div>
                     </div>
                     <div className="font-semibold texl-xl gap-1 mb-4">
@@ -135,6 +182,21 @@ export default function ExploreDetail() {
                             </button>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="w-full max-w-[1440px] mx-auto px-[100px] pb-[20px]">
+                <div className="w-auto inline-flex rounded-[12px] bg-[#0C2A740D] items-center gap-[6px] py-[6px] px-[10px] font-medium text-xs">
+                    {(summaryRate?.profiles.length ?? 0) > 0 && <div className="flex -space-x-4">
+                        {summaryRate?.profiles.map((profile, index) => (
+                            <img key={'avatar.' + index} className="w-[33px] h-[33px] rounded-full border-2 border-white" src={profile ?? "/images/profile.jpg"} alt="" />
+                        ))}
+                    </div>}
+                    <span>{summaryRate?.total ?? 0}</span>
+                    <span className="font-medium text-[15px] mr-1">|</span>
+                    <div className="flex gap-1 pb-[1px] mr-1">
+                        <Rating rating={summaryRate?.average ?? 0} size={16} />
+                    </div>
+                    <span>{summaryRate?.average ?? 0}/5</span>
                 </div>
             </div>
             <Comment post={name} />

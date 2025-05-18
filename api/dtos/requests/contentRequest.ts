@@ -16,3 +16,8 @@ export interface CommentRequest {
     post: string;
     description: string;
 }
+
+export interface RateRequest {
+    rate: number;
+    post: string;
+}

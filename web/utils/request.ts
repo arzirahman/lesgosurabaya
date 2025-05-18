@@ -36,14 +36,28 @@ export const request = (input?: IRequest) => {
             !input?.noLoading && store.dispatch(setLoading(false))
             return Promise.reject(error instanceof Error ? error : new Error(error));
         },
-    );    
+    );
     axiosInstance.interceptors.response.use(
         (response) => {
             !input?.noLoading && store.dispatch(setLoading(false))
-            return Promise.resolve(response) 
+            return Promise.resolve(response)
         },
         async (error) => {
             !input?.noLoading && store.dispatch(setLoading(false))
+
+            if (error.response?.status === 401) {
+                Cookies.remove('lesgosurabaya', {
+                    expires: 30,
+                    path: '/',
+                    domain: import.meta.env.VITE_COOKIE_DOMAIN,
+                    secure: import.meta.env.VITE_COOKIE_SECURE === 'true',
+                    sameSite: 'Lax'
+                });
+
+                window.location.href = '/sign-in';
+                return;
+            }
+
             return Promise.reject(error instanceof Error ? error : new Error(error));
         }
     )

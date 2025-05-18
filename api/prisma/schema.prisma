@@ -17,6 +17,7 @@ model User {
   likes      Like[]
   favourites Favourite[]
   comments   Comment[]
+  rates      Rate[]
 }
 
 model Like {
@@ -47,4 +48,15 @@ model Comment {
   createdAt   DateTime @default(now())
 
   user User @relation(fields: [email], references: [email], onDelete: Cascade)
+}
+
+model Rate {
+  id        Int      @id @default(autoincrement())
+  post      String
+  rate      Int
+  email     String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [email], references: [email], onDelete: Cascade)
+
+  @@unique([post, email])
 }

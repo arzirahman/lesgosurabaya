@@ -1,0 +1,2 @@
+-- AddForeignKey
+ALTER TABLE "Rate" ADD CONSTRAINT "Rate_email_fkey" FOREIGN KEY ("email") REFERENCES "User"("email") ON DELETE CASCADE ON UPDATE CASCADE;

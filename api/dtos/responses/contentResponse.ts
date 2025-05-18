@@ -23,3 +23,11 @@ export interface FavouroteAndLikeResponseData {
 }
 
 export type FavouroteAndLikeResponse = HttpResponse<FavouroteAndLikeResponseData>;
+
+export interface RateSummaryResponseData {
+    average: number,
+    total: number,
+    profiles: (string | null)[],
+}
+
+export type RateSummaryResponse = HttpResponse<RateSummaryResponseData>;
