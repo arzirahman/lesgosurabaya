@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 export interface IAccordion {
     name?: string;
@@ -7,15 +8,25 @@ export interface IAccordion {
     image?: string;
     id?: string;
     defaultChecked?: boolean;
+    link: string;
 }
 
-export default function Accordion({ name, date, location, image, id, defaultChecked }: Readonly<IAccordion>) {
+export default function Accordion({ name, date, location, image, id, defaultChecked, link }: Readonly<IAccordion>) {
     const [loaded, setLoaded] = useState(false);
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    const handleMouseEnter = () => {
+        console.log('tes');
+        if (inputRef.current) {
+            inputRef.current.checked = true;
+            inputRef.current.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+    };
 
     return (
-        <div className="rounded-[20px] h-[444px] overflow-hidden">
-            <input type="radio" name="accordion" id={id} className="peer hidden" defaultChecked={defaultChecked} />
-            <label htmlFor={id} className="flex items-end relative cursor-pointer w-[150px] h-full peer-checked:w-[500px] transition-all duration-300 pb-[20px] px-[40px]">
+        <Link to={link} className="rounded-[20px] h-[444px] overflow-hidden">
+            <input ref={inputRef} type="radio" name="accordion" id={id} className="peer hidden" defaultChecked={defaultChecked} />
+            <label onMouseEnter={handleMouseEnter} htmlFor={id} className="flex items-end relative cursor-pointer w-[150px] h-full peer-checked:w-[500px] transition-all duration-400 pb-[20px] px-[40px]">
                 {!loaded && (
                     <div className="absolute min-h-[444px] inset-0 min-w-[500px] ml-[-35px] mt-[-95px] bg-gray-300 animate-pulse z-[0]"></div>
                 )}
@@ -58,6 +69,6 @@ export default function Accordion({ name, date, location, image, id, defaultChec
                     </div>
                 </div>
             </label>
-        </div>
+        </Link>
     )
 }

@@ -2,12 +2,16 @@ import { Link, useLocation } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import { useRef, useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
+import dummyData from '../../assets/dummy/search.json';
 
 export default function Navbar() {
     const exploreDropdownRef = useRef<HTMLDivElement>(null);
+    const searchRef = useRef<HTMLDivElement>(null);
+    const searchButtonRef = useRef<HTMLButtonElement>(null);
     const [isOpen, setIsOpen] = useState(false);
     const [token, setToken] = useState(Cookies.get('lesgosurabaya') ?? null);
     const [profile, setProfile] = useState<string>();
+    const [openSearch, setOpenSearch] = useState(false);
     const location = useLocation();
     const explore = [
         {
@@ -27,6 +31,8 @@ export default function Navbar() {
             path: '/explore/lifestyle'
         },
     ];
+    const [searchResults, setSearchResults] = useState<typeof dummyData>([]);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         const token = Cookies.get('lesgosurabaya') ?? null;
@@ -46,12 +52,18 @@ export default function Navbar() {
         if (!profile && token) {
             fetchImage();
         }
+
+        setOpenSearch(false)
     }, [location.pathname, location.search]);
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             if (exploreDropdownRef.current && !exploreDropdownRef.current.contains(event.target as Node)) {
                 setIsOpen(false);
+            }
+
+            if (searchRef.current && (!searchRef.current.contains(event.target as Node))) {
+                setOpenSearch(false);
             }
         }
 
@@ -60,6 +72,24 @@ export default function Navbar() {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    useEffect(() => {
+        onSearch('');
+    }, [openSearch])
+
+    const onSearch = (search: string) => {
+        setSearchTerm(search);
+        if (search.trim() === '') {
+            setSearchResults([]);
+            return;
+        }
+
+        const lower = search.toLowerCase();
+        const filtered = dummyData.filter((item) =>
+            item.name.toLowerCase().includes(lower)
+        );
+        setSearchResults(filtered);
+    };
 
     return (
         <nav className='fixed inset-0 h-[100px] z-10 w-full bg-[rgba(0,0,0,0.8)] rounded-b-[40px]'>
@@ -91,7 +121,7 @@ export default function Navbar() {
                         >
                             <div className='flex flex-col py-[10px] px-[7px] gap-1'>
                                 {explore.map((item) => (
-                                    <Link onClick={() => setIsOpen(false)} key={'link.explore.' + item.name} to={item.path} className='w-[142px] h-[34px] cursor-pointer text-center'>{item.name}</Link>
+                                    <Link onClick={() => setIsOpen(false)} key={'link.explore.' + item.name} to={item.path} className='w-[142px] h-[34px] cursor-pointer text-center hover:text-[#0C2A74] transition-colors duration-300'>{item.name}</Link>
                                 ))}
                             </div>
                         </div>
@@ -101,7 +131,7 @@ export default function Navbar() {
                     <Link to={'/contact'}>Contact</Link>
                 </div>
                 <div className='flex items-center gap-7 px-20'>
-                    <button>
+                    <button ref={searchButtonRef} className='cursor-pointer' onClick={() => { setOpenSearch(true) }}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
                             <path d="M27.919 24.586L22.8243 19.509C23.877 17.928 24.4931 16.035 24.4931 14C24.4931 8.486 19.9915 4 14.4583 4C8.92517 4 4.42358 8.486 4.42358 14C4.42358 19.514 8.92517 24 14.4583 24C16.5004 24 18.4 23.386 19.9865 22.337L25.0811 27.414C25.8638 28.195 27.1362 28.195 27.919 27.414C28.7027 26.633 28.7027 25.367 27.919 24.586ZM7.43401 14C7.43401 10.14 10.5849 7 14.4583 7C18.3317 7 21.4827 10.14 21.4827 14C21.4827 17.86 18.3317 21 14.4583 21C10.5849 21 7.43401 17.86 7.43401 14Z" fill="white" />
                         </svg>
@@ -118,6 +148,53 @@ export default function Navbar() {
                     </Link>
                 </div>
             </div>
+            {<div ref={searchRef} className={`${openSearch ? 'translate-y-0' : '-translate-y-full'} shadow-md max-h-[500px] overflow-auto transition-all duration-300 absolute w-full flex justify-center top-0 bg-white rounded-[8px] px-[42px] py-[50px]`}>
+                <div className='w-full max-w-[1440px] bg-white flex flex-col'>
+                    <div className='flex gap-[36px] items-start w-full'>
+                        <div className='flex border-b border-black flex-1 pb-[11px]'>
+                            <input value={searchTerm} onChange={(e) => { onSearch(e.target.value) }} type='text' className='font-semibold text-xl px-[20px] placeholder:text-[#737373] flex-1 text-black outline-none' placeholder='Find Your Destination' />
+                            <button>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.219 27.4483L24.4496 20.6789C25.8483 18.5709 26.6669 16.0468 26.6669 13.3335C26.6669 5.9814 20.6855 0 13.3335 0C5.9814 0 0 5.9814 0 13.3335C0 20.6855 5.9814 26.6669 13.3335 26.6669C16.0468 26.6669 18.5709 25.8483 20.6789 24.4496L27.4483 31.219C28.4883 32.2603 30.179 32.2603 31.219 31.219C32.2603 30.1776 32.2603 28.4896 31.219 27.4483ZM4.00004 13.3335C4.00004 8.18675 8.18675 4.00004 13.3335 4.00004C18.4802 4.00004 22.6669 8.18675 22.6669 13.3335C22.6669 18.4802 18.4802 22.6669 13.3335 22.6669C8.18675 22.6669 4.00004 18.4802 4.00004 13.3335Z" fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button className='cursor-pointer' onClick={() => { setOpenSearch(false) }}>
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M28.3589 9.85761L10.1064 28.1467" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M10.1064 9.85761L28.3589 28.1467" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    {searchTerm && searchResults.length > 0 && (
+                        <div className='grid grid-cols-2 p-[20px] w-full'>
+                            {searchResults.map((item, index) => {
+                                let link: string = location.pathname + location.search;
+
+                                if (item.detail) {
+                                    if (item.isEvent) {
+                                        link = `/event/${item.name}`;
+                                    } else {
+                                        link = `/explore/detail/${item.name}`;
+                                    }
+                                }
+
+                                return (
+                                    <Link to={link} key={'search.' + index} className='flex-1 flex gap-6 items-center cursor-pointer rounded-[20px] hover:bg-[#0C2A740D] p-[20px]'>
+                                        <div className='w-[100px] h-[100px] rounded-[12px] relative overflow-hidden'>
+                                            <img className='w-full h-full object-cover object-center' alt='' src={item.image} />
+                                        </div>
+                                        <div className='flex flex-col'>
+                                            <span className='font-semibold text-xl'>{item.name}</span>
+                                            <span className='font-medium text-sm'>{item.location}</span>
+                                        </div>
+                                    </Link>
+                                )
+                            })}
+                        </div>
+                    )}
+                </div>
+            </div>}
         </nav>
     );
 }

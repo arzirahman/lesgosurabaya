@@ -1,0 +1,432 @@
+[
+    {
+        "name": "Drift.inc",
+        "location": "Jl. Kaliwaron No. 60, Mojo, Surabaya",
+        "image": "/images/explore/wisata/1.jpg",
+        "detail": true
+    },
+    {
+        "name": "BYEBELI",
+        "location": "Jl. Raya Palm Hill No.K8/12, Surabaya",
+        "image": "/images/explore/wisata/2.jpg",
+        "detail": true
+    },
+    {
+        "name": "Dreamfield Tactical",
+        "location": "The Central Mall, Floor 2,Jl. Tidar, Surabaya",
+        "image": "/images/explore/wisata/3.png",
+        "detail": true
+    },
+    {
+        "name": "The Ramoe",
+        "location": "Excotel Surabaya, Jl. Ahmad Yani No. 119",
+        "image": "/images/explore/wisata/4.png",
+        "detail": true
+    },
+    {
+        "name": "Kommafuku",
+        "location": "2nd Floor of Locaahanos Dining Club, Jl. Jawa No.6",
+        "image": "/images/explore/wisata/5.jpg"
+    },
+    {
+        "name": "Mang Engking",
+        "location": "Jl. Gubeng Masjid, Pasar Keling, Surabaya",
+        "image": "/images/explore/wisata/6.heic"
+    },
+    {
+        "name": "The Wolves",
+        "location": "Ruko Margoraya, Jl. Raya Margorejo Indah No. 115",
+        "image": "/images/explore/wisata/7.jpg"
+    },
+    {
+        "name": "Steak Industry",
+        "location": "Jl. Nias No. 140, Surabaya",
+        "image": "/images/explore/wisata/8.jpg"
+    },
+    {
+        "name": "Yamie Panda",
+        "location": "Studio Food Court, Lt.1, Pakuwon Mall Surabaya",
+        "image": "/images/explore/wisata/9.webp"
+    },
+    {
+        "name": "Cafe Balek Kampoeng",
+        "location": "Jl. Genteng Besar No. 83C, Surabaya",
+        "image": "/images/explore/wisata/10.jpg"
+    },
+    {
+        "name": "Warung Apung SDA",
+        "location": "Jl. Sunandar Priyo Sudarmo No.20-22, Sidoarjo",
+        "image": "/images/explore/wisata/11.webp"
+    },
+    {
+        "name": "Smoke House and Coffee",
+        "location": "Jl. Taman Ketampon No. 75-76, Surabaya",
+        "image": "/images/explore/wisata/12.jpg"
+    },
+    {
+        "name": "Nyamuda",
+        "location": "Jl. Darmo Permai Sel. XI No.18, Surabaya",
+        "image": "/images/explore/wisata/13.png"
+    },
+    {
+        "name": "Teazzi",
+        "location": "Pakuwon City Mall 2, Jl. Raya Laguna KJW Putih",
+        "image": "/images/explore/wisata/14.jpg"
+    },
+    {
+        "name": "Ayam Geprek Dotuman",
+        "location": "Tunjungan Plaza Surabaya",
+        "image": "/images/explore/wisata/15.webp"
+    },
+    {
+        "name": "Pari Bendo Lawang",
+        "location": "Jl. Argotirto No. 24, Malang",
+        "image": "/images/explore/wisata/16.jpg"
+    },
+    {
+        "name": "Ebisu Japanese Restaurant",
+        "location": "Jl. Raya Darmo 68-78, Surabaya",
+        "image": "/images/explore/wisata/17.jpg"
+    },
+    {
+        "name": "The Kenthangs",
+        "location": "Royal Plaza Lt. G, Surabaya",
+        "image": "/images/explore/wisata/18.jpg"
+    },
+    {
+        "name": "Roti Srikaya Agogo",
+        "location": "Gwalk Taman Gapura FG-5, Surabaya",
+        "image": "/images/explore/wisata/19.webp"
+    },
+    {
+        "name": "Rumah Hantu Kota Lama",
+        "location": "Jl. Rajawali No. 47, Kota Lama, Surabaya",
+        "image": "/images/explore/wisata/20.png"
+    },
+    {
+        "name": "Kedai Doa Ibu",
+        "location": "Jl. Kaliwaron No. 60, Mojo, Surabaya",
+        "image": "/images/explore/umkm/1.png",
+        "detail": true
+    },
+    {
+        "name": "WIBAJUL",
+        "location": "Jl. Ngagel Jaya Tengah No.96, Surabaya",
+        "image": "/images/explore/umkm/2.png",
+        "detail": true
+    },
+    {
+        "name": "Mie Babat Jembatan Asli",
+        "location": "Bu Cokro, Jl. Dharmahusada No.190",
+        "image": "/images/explore/umkm/3.jpg",
+        "detail": true
+    },
+    {
+        "name": "Seblak Kak Ross",
+        "location": "Jl. Pakal Madya Barat No.74, Surabaya",
+        "image": "/images/explore/umkm/4.png",
+        "detail": true
+    },
+    {
+        "name": "Gudeg Jogja Bu Ndari",
+        "location": "Hollywood Surabaya, Jl. Ahmad Yani No.73",
+        "image": "/images/explore/umkm/5.jpg"
+    },
+    {
+        "name": "Bebek Mbok Ndower",
+        "location": " Jl. Barata Jaya XX No.97, Surabaya ",
+        "image": "/images/explore/umkm/6.webp"
+    },
+    {
+        "name": "Nyamuda",
+        "location": "Jl. Darmo Permai sel XI No.18, Surabaya",
+        "image": "/images/explore/umkm/7.png"
+    },
+    {
+        "name": "Sego Meduro",
+        "location": "Jl. Demak No.304, Surabaya",
+        "image": "/images/explore/umkm/8.jpg"
+    },
+    {
+        "name": "Tilli Corner",
+        "location": "Based on Surabaya (By Appointment)",
+        "image": "/images/explore/umkm/9.webp"
+    },
+    {
+        "name": "Chibiz",
+        "location": "Citywalk Pakuwon City Mall (PCM), Surabaya",
+        "image": "/images/explore/umkm/10.jpg"
+    },
+    {
+        "name": "The Corner Hub",
+        "location": "Dharmahusada Indah Blok C No.46, Surabaya",
+        "image": "/images/explore/umkm/11.png"
+    },
+    {
+        "name": "Aku Suka Makanan Jepang",
+        "location": "Jl. Siwalankerto No.241, Surabaya",
+        "image": "/images/explore/umkm/12.png"
+    },
+    {
+        "name": "Bakso Bang Disko",
+        "location": "Jl. Pasar Kembang No. 76, Surabaya",
+        "image": "/images/explore/umkm/13.jpg"
+    },
+    {
+        "name": "Sego Meduro",
+        "location": "Jl. Demak No.304, Surabaya",
+        "image": "/images/explore/umkm/8.jpg"
+    },
+    {
+        "name": "Hok Mien",
+        "location": "Jl. Karang Empat Besar No.958, Surabaya",
+        "image": "/images/explore/umkm/15.jpg"
+    },
+    {
+        "name": "Pari Bendo Lawang",
+        "location": "DTC Wonokromo (Lt.4), Surabaya",
+         "image": "/images/explore/umkm/16.jpg"
+    },
+    {
+        "name": "Dapur Maya",
+        "location": " DTC Wonokromo (Lt.4), Surabaya",
+        "image": "/images/explore/umkm/17.webp"
+    },
+    {
+        "name": "Bebek Semangat",
+        "location": "Tunjungan Plaza 2, Lt.5, Surabaya",
+        "image": "/images/explore/umkm/18.heic"
+    },
+    {
+        "name": "Bakso Putra Mantep",
+        "location": "Jl. Kenjeran 484, Surabaya",
+        "image": "/images/explore/umkm/19.jpg"
+    },
+    {
+        "name": "Sambal Hot Mbak Lina",
+        "location": "Jl. Raya Klakah Rejo No.20, Surabaya",
+        "image": "/images/explore/umkm/20.jpeg"
+    },
+    {
+        "name": "Jayaland",
+        "location": "Ruko Puncak Bukit Golf, Blok RBZ",
+        "image": "/images/explore/hospital/1.jpg",
+        "detail": true
+    },
+    {
+        "name": "The Capital Hotel",
+        "location": "Jl. Raya Jemursari no.258, Surabaya",
+        "image": "/images/explore/hospital/2.jpg",
+        "detail": true
+    },
+    {
+        "name": "Dafam Pacific Caesar",
+        "location": "Jl. Dr.IR. Soekarno, No.45C, Surabaya",
+        "image": "/images/explore/hospital/3.jpg",
+        "detail": true
+    },
+    {
+        "name": "News Hotel",
+        "location": "Jl. Pondok Maspion No.1, Sidoarjo",
+        "image": "/images/explore/hospital/4.jpg",
+        "detail": true
+    },
+    {
+        "name": "Mahameru Regency",
+        "location": "Taman Dhika Sidoarjo Kota",
+        "image": "/images/explore/hospital/5.png"
+    },
+    {
+        "name": "Taman Melati Surabaya",
+        "location": " Jl. Barata Jaya XV No.16, Surabaya",
+        "image": "/images/explore/hospital/6.png"
+    },
+    {
+        "name": "Nugas Space",
+        "location": "Perum Bumi Marina Emas Blok F, No.19, Surabaya",
+        "image": "/images/explore/hospital/7.jpg"
+    },
+    {
+        "name": "Hive Five",
+        "location": "Jl. Dukuh Kupang Bar. II No.26-28, Surabaya",
+        "image": "/images/explore/hospital/8.webp"
+    },
+    {
+        "name": "Villa De Vera Batu",
+        "location": "Perumahan Habitat, No.015, Kota Batu",
+        "image": "/images/explore/hospital/9.webp"
+    },
+    {
+        "name": "Nordic Cluster Oslo",
+        "location": "Nordic Cluster Oslo, Puri Surya Jaya",
+        "image": "/images/explore/hospital/10.jpg"
+    },
+    {
+        "name": "Nayta Hotel",
+        "location": "Jl. Bypass Ngurah Rai, No.9, Surabaya.",
+        "image": "/images/explore/hospital/11.webp"
+    },
+    {
+        "name": "Zio Homestay Syariah",
+        "location": "Jl. Gayung Kebonsari Timur No.27, Surabaya",
+        "image": "/images/explore/hospital/12.webp"
+    },
+    {
+        "name": "Yoga Fit",
+        "location": "Ruko Puncak Bukit Golf, Blok RBZ",
+        "image": "/images/explore/lifestyle/1.jpg",
+        "detail": true
+    },
+    {
+        "name": "Katha Beauty Care",
+        "location": "Ruko Puri Indah Ketintang No.5, Surabaya",
+        "image": "/images/explore/lifestyle/2.png",
+        "detail": true
+    },
+    {
+        "name": "Fifa Gym",
+        "location": "Jl. Raya Rangkah Kidul No. 21, Sidoarjo",
+        "image": "/images/explore/lifestyle/3.png",
+        "detail": true
+    },
+    {
+        "name": "Arumda Beauty",
+        "location": "Benowo Trade Center (BTC, Jl. Raya Ngasinan No.27",
+        "image": "/images/explore/lifestyle/4.png",
+        "detail": true
+    },
+    {
+        "name": "Q-Life Klinik",
+        "location": "Ruko Villa bukit Mas Re-8, Jl. KH Abdul Wahab Siamin",
+        "image": "/images/explore/lifestyle/5.png"
+    },
+    {
+        "name": "DFG Dental",
+        "location": " Jl. Barata Jaya XV No.16, Surabaya ",
+        "image": "/images/explore/lifestyle/6.png"
+    },
+    {
+        "name": "Hewania 2",
+        "location": "Jl. Darmo Baru Barat XII No. 67, Surabaya",
+        "image": "/images/explore/lifestyle/7.jpg"
+    },
+    {
+        "name": "Adara Attire",
+        "location": "Jl. Dukuh Kupang Bar. II No.26-28, Surabaya",
+        "image": "/images/explore/lifestyle/8.webp"
+    },
+    {
+        "name": "21- Studio",
+        "location": "Jl. Klampis Harapan Blok G-1BA, Surabaya",
+        "image": "/images/explore/lifestyle/9.png"
+    },
+    {
+        "name": "SYGMA Dental Clinic",
+        "location": "Taman Paris Ruko, Jl. Puri Surya Jaya No. A2-02",
+        "image": "/images/explore/lifestyle/10.webp"
+    },
+    {
+        "name": "Jess Beauty Blessed",
+        "location": "Pakuwon Trade Center (PTC) Lt. G, Unit D5.",
+        "image": "/images/explore/lifestyle/11.png"
+    },
+    {
+        "name": "Laundry Pelangi UPN",
+        "location": "Jl. Raya No. 18, Medokan Ayu, Surabaya",
+        "image": "/images/explore/lifestyle/12.webp"
+    },
+    {
+        "name": "MBA Dental Care",
+        "location": "Jl. Jagiran no.2, Pacar Keling, Surabaya",
+        "image": "/images/explore/lifestyle/13.png"
+    },
+    {
+        "name": "MOI Shopaholic",
+        "location": "Maspion Square Lt.Dasar Blok G20, Surabaya",
+        "image": "/images/explore/lifestyle/14.webp"
+    },
+    {
+        "name": "Rumah Katun Surabaya",
+        "location": "Jl. Mayjend HR. Muhammad No.73A, Surabaya",
+        "image": "/images/explore/lifestyle/15.png"
+    },
+    {
+        "name": "Benefitness",
+        "location": "Jl. Dukuh Kupang Timur 19, No.72, Surabaya",
+        "image": "/images/explore/lifestyle/16.webp"
+    },
+    {
+        "name": "Sun Power Ceramics",
+        "location": "Kawasan Ngoro Industri Persada Blok R2A, Mojokerto",
+        "image": "/images/explore/lifestyle/17.webp"
+    },
+    {
+        "name": "Ginza Professional Salon",
+        "location": "Jl. Raya Rungkut Mapan FA 6, Surabaya",
+        "image": "/images/explore/lifestyle/18.webp"
+    },
+    {
+        "name": "Authen Kick",
+        "location": "Beyond Market, Surabaya Convention Center, PTC",
+        "image": "/images/explore/lifestyle/19.heic"
+    },
+    {
+        "name": "Benayu Center",
+        "location": "Park Royal Regency Block C3 No.19, Sidoarjo",
+        "image": "/images/explore/lifestyle/20.webp"
+    },
+    {
+        "name": "Dessert Day PTC",
+        "location": "Main Atrium LG Floor, PTC, Surabaya",
+        "image": "/images/event/1.png",
+        "detail": true,
+        "isEvent": true
+    },
+    {
+        "name": "ISSLF x GC",
+        "location": "Main Atrium Level Ground, Grand City Mall Surabaya",
+        "image": "/images/event/2.png",
+        "detail": true,
+        "isEvent": true
+    },
+    {
+        "name": "Chinese New Year TP",
+        "location": "Atrium Tunjungan Plaza 6, Surabaya",
+        "image": "/images/event/3.png",
+        "detail": true,
+        "isEvent": true
+    },
+    {
+        "name": "Xplora",
+        "location": "Grand Atrium Pakuwon Mall Surabaya",
+        "image": "/images/event/4.png",
+        "detail": true,
+        "isEvent": true
+    },
+    {
+        "name": "Home Sweet Home",
+        "location": "Main Atrium LG Floor, Pakuwon Trade Center (PTC), Surabaya",
+        "image": "/images/event/5.png",
+        "detail": true,
+        "isEvent": true
+    },
+    {
+        "name": "Kaka Jeweluxe",
+        "location": "Event Project X Market, Tunjungan Plaza 3, Lv 6, Surabaya",
+        "image": "/images/event/6.png",
+        "detail": true,
+        "isEvent": true
+    },
+    {
+        "name": "Kepo Asian Culinary",
+        "location": "Atrium Galaxy Mall 3, Surabaya",
+        "image": "/images/event/7.png",
+        "detail": true,
+        "isEvent": true
+    },
+    {
+        "name": "Matcha Addict",
+        "location": "tunjungan Plaza 3, Lv 6, Surabaya",
+        "image": "/images/event/8.jpg"
+    }
+]

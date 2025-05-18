@@ -13,7 +13,7 @@ export default function EventDetail() {
     });
 
     return (
-        <div className="w-full flex flex-col pt-[160px]">
+        <div className="w-full flex flex-col pt-[160px] overflow-x-hidden">
             <div className="w-full max-w-[1440px] px-[70px] flex gap-[30px] mx-auto pb-[70px]">
                 <div className="w-[632px] h-[1124px] overflow-hidden rounded-[20px]">
                     {details.highlight.type === "video" ? (
@@ -95,7 +95,7 @@ export default function EventDetail() {
                 </div>
             </div>
             <Comment post={name} />
-            <Footer />
+            <Footer iconClassname="w-[1100px] absolute bottom-[-90px] right-[-60px] z-[-1]" />
         </div>
     )
 }

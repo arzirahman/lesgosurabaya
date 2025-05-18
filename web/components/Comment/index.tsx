@@ -84,7 +84,7 @@ export default function Comment({ post }: Readonly<IComment>) {
 
     const pushComment = async (description: string) => {
         const token = Cookies.get('lesgosurabaya') ?? null;
-        if (!token) navigate('/sign-in');
+        if (!token) return navigate('/sign-in');
         if (loading) return;
         setLoading(true);
         try {
@@ -150,7 +150,10 @@ export default function Comment({ post }: Readonly<IComment>) {
                             }
                         }}
                     />
-                    <button className="bg-[#0C2A74] w-[44px] h-[30px] rounded-[20px] flex items-center justify-center cursor-pointer transition-all duration-500 hover:scale-110 ease-in-out active:scale-100">
+                    <button onClick={() => {
+                        setInputValue("");
+                        pushComment(inputValue.trim())
+                    }} className="bg-[#0C2A74] w-[44px] h-[30px] rounded-[20px] flex items-center justify-center cursor-pointer transition-all duration-500 hover:scale-110 ease-in-out active:scale-100">
                         <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_581_1426)">
                                 <path d="M16 2.00733L16 19.8823" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

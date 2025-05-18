@@ -9,44 +9,51 @@ export default function Section3() {
             name: 'Yu-I Kitchen',
             image: '/images/event/7.png',
             location: 'Event Kepo Asian Culinary Vol. 2, Atrium Galaxy Mall',
-            date: '18 - 23 February 2025'
+            date: '18 - 23 February 2025',
+            link: '/event/Kepo Asian Culinary'
         },
         {
             name: 'XPLORA World Tour & Travel',
             image: '/images/event/4.png',
             location: 'Event ASTINDO OCBC Holiyaay Travel Fair 2025, Grand Atrium Pakuwon Mall',
-            date: '20 - 23 February 2025'
+            date: '20 - 23 February 2025',
+            link: '/event/Xplora'
         },
         {
             name: 'Home Sweet Home',
             image: '/images/event/5.png',
             location: 'Main Atrium LG Floor, PTC, Surabaya',
             date: '7 - 16 March 2025',
-            defaultChecked: true
+            defaultChecked: true,
+            link: '/event/Home Sweet Home'
         },
         {
             name: 'ISCLF',
             image: '/images/event/2.png',
             location: 'Main Atrium Level Ground, Grand City Mall Surabaya',
-            date: '5 - 6 February 2025'
+            date: '5 - 6 February 2025',
+            link: '/event/ISSLF x GC'
         },
         {
             name: 'Majestic Lunar Wonders',
             image: '/images/event/3.png',
             location: 'Atrium Tunjungan Plaza 6, Surabaya',
-            date: '17 January - 24 February 2025'
+            date: '17 January - 24 February 2025',
+            link: '/event/Chinese New Year TP'
         },
         {
             name: 'Dessert Days',
             image: '/images/event/1.png',
             location: 'Main Atrium LG, PTC, Surabaya',
-            date: '26 February - 2 March 2025'
+            date: '26 February - 2 March 2025',
+            link: '/event/Dessert Day PTC'
         },
         {
             name: 'Kaka Jeweluxe',
             image: '/images/event/6.png',
             location: 'Event Project X Market, Tunjungan Plaza 3, Luv 6',
-            date: '21 - 23 Maret 2025'
+            date: '21 - 23 Maret 2025',
+            link: '/event/Kaka Jeweluxe'
         },
     ]
 

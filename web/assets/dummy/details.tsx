@@ -98,8 +98,8 @@ export const exploreDetail: IExploreDetailList = {
             "/images/explore/wisata/byebeli/4.png",
         ],
         "highlight": {
-            "type": "image",
-            "url": "/images/explore/wisata/byebeli/4.png",
+            "type": "video",
+            "url": "/images/explore/wisata/byebeli/5.mp4",
         }
     },
     "Dreamfield Tactical": {
@@ -170,8 +170,8 @@ export const exploreDetail: IExploreDetailList = {
             "/images/explore/wisata/dreamfield/4.webp",
         ],
         "highlight": {
-            "type": "image",
-            "url": "/images/explore/wisata/dreamfield/4.webp",
+            "type": "video",
+            "url": "/images/explore/wisata/dreamfield/5.mp4",
         }
     },
     "The Ramoe": {

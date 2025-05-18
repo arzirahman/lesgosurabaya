@@ -112,7 +112,7 @@ export default function ExploreDetail() {
     ];
 
     return (
-        <div className="w-full flex flex-col pt-[160px]">
+        <div className="w-full flex flex-col pt-[160px] overflow-x-hidden">
             <div className="px-[calc(((100%-1440px)/2)+70px)] flex gap-5 overflow-x-scroll no-scrollbar mb-[40px]">
                 {details.pictures.map((picture, index) => (
                     <div key={'picture.' + details.name + "." + index} className="min-w-[420px] max-w-[420px] h-[401px] rounded-[20px] overflow-hidden relative">
@@ -200,7 +200,7 @@ export default function ExploreDetail() {
                 </div>
             </div>
             <Comment post={name} />
-            <Footer />
+            <Footer iconClassname="w-[1100px] absolute bottom-[-90px] right-[-60px] z-[-1]" />
         </div>
     )
 }
