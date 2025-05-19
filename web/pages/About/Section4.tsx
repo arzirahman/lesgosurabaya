@@ -38,7 +38,7 @@ export default function Section4() {
     return (
         <div className="w-full bg-[#D9D9D9] p-[70px]">
             <div className="flex flex-col gap-[50px] items-center max-w-[1440px] mx-auto w-full">
-                <span className="font-extrabold text-[70px] leading-[76px]">Partner Terpercaya</span>
+                <span className="font-extrabold text-[70px] leading-[76px]">in partner with</span>
                 <div className="grid grid-cols-8 gap-y-[47px] gap-x-[15px] w-full">
                     {partners.map((partner) => (
                         <img
