@@ -63,7 +63,7 @@ export default function LearnMore() {
                 </div>
                 <div className='flex flex-col gap-[36px] flex-1'>
                     <span className='font-semibold text-2xl'>Thank you for your interest in collaborating with LesGoSurabaya! Please fill out this form completely. Our team will get back to you within 2–3 business days after receiving your submission.</span>
-                    <button className='w-[200px] h-[76px] rounded-[20px] text-white bg-[#0C2A74] text-center underline font-bold text-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 active:scale-100'>Google Form</button>
+                    <a href='https://forms.gle/jbzPymWYHqXVAUuV6' target='__blank' className='w-[200px] flex justify-center items-center h-[76px] rounded-[20px] text-white bg-[#0C2A74] text-center underline font-bold text-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 active:scale-100'>Google Form</a>
                 </div>
             </div>
             <Footer iconClassname='w-[1030px] absolute bottom-[-50px] right-[-50px] z-[-1]' />

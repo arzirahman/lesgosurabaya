@@ -6,7 +6,7 @@ export default function Section3() {
                     Let's <span className="text-[#0C2A74]">Explore</span> the City Together!
                 </div>
                 <div className="flex-1 font-medium text-xl">
-                    LesGoSurabaya is here to bring you closer to the best sides of the city—from the tastiest food spots and the most exciting events to unique stories hidden in every corner. Through engaging and informative content, we aim to be your exploration buddy in discovering Surabaya.
+                    LesGoSurabaya is here to bring you closer to the best sides of the city from the tastiest food spots and the most exciting events to unique stories hidden in every corner. Through engaging and informative content, we aim to be your exploration buddy in discovering Surabaya.
                 </div>
             </div>
         </div>

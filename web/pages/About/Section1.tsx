@@ -15,7 +15,7 @@ export default function Section1() {
                         LESGOSURABAYA
                     </span>
                     <span className="font-medium text-xl text-[#060606] mb-7">
-                        Welcome to LesGoSurabaya, a media platform dedicated to showcasing the best of Surabaya. We aim to highlight and promote the city’s most interesting aspects—from culinary delights, local businesses (UMKM), and exciting events, to tourist attractions and hidden stories tucked away in every corner of Surabaya.
+                        Welcome to LesGoSurabaya, a media platform dedicated to showcasing the best of Surabaya. We aim to highlight and promote the city’s most interesting aspects from culinary delights, local businesses (UMKM), and exciting events, to tourist attractions and hidden stories tucked away in every corner of Surabaya.
                     </span>
                     <span className="font-medium text-xl text-[#060606]">
                         What started as a passion on social media has grown into a trusted local guide through engaging short-form videos and honest reviews. Whether it's legendary street food, cozy cafes, vibrant markets, or inspiring local stories, LesGoSurabaya is here to help you experience Surabaya in the most authentic way.
