@@ -113,8 +113,8 @@ export default function Comment({ post }: Readonly<IComment>) {
                     {comments.map((comment) => (
                         <div key={"comment." + comment.id} className="flex flex-col px-[30px] py-[14px] bg-[#0C2A740D] rounded-[20px] gap-[12px]">
                             <div className="flex items-center gap-2">
-                                <div className="w-[50px] h-[50px] overflow-hidden rounded-full">
-                                    <img alt="" src={comment.user.profile ?? '/images/profile.jpg'} className='w-full h-full object-cover object-center' />
+                                <div className="w-[50px] h-[50px] overflow-hidden rounded-full flex justify-center items-center">
+                                    <img alt="" src={comment.user.profile ?? '/images/profile.jpg'} className='w-[60px] h-[60px] object-cover object-center' />
                                 </div>
                                 <div className='flex flex-col'>
                                     <span className='text-xs font-bold'>{comment.user.name}</span>

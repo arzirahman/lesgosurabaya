@@ -44,9 +44,9 @@ export async function signUp(req: Request<SignUpRequest>, res: Response, next: N
     }
 }
 
-export async function signIn(req: Request<SignInRequest>, res: Response, next: NextFunction){
+export async function signIn(req: Request<SignInRequest>, res: Response, next: NextFunction) {
     try {
-        const { email, password } = req.body as SignInRequest;  
+        const { email, password } = req.body as SignInRequest;
         const user = await prisma.user.findUnique({
             where: { email },
         });
@@ -74,7 +74,7 @@ export async function signIn(req: Request<SignInRequest>, res: Response, next: N
     }
 }
 
-export async function profile(req: AuthenticatedRequest<any>, res: Response, next: NextFunction){
+export async function profile(req: AuthenticatedRequest<any>, res: Response, next: NextFunction) {
     try {
         const email = req.data?.email ?? '';
 
@@ -99,6 +99,58 @@ export async function profile(req: AuthenticatedRequest<any>, res: Response, nex
                 profile: user.profile
             }
         }
+
+        res.json(response);
+    } catch (error: unknown) {
+        next(error);
+    }
+}
+
+export async function changeAvatar(req: AuthenticatedRequest<any>, res: Response, next: NextFunction) {
+    try {
+        const email = req.data?.email ?? '';
+        const avatar: string = req.body?.avatar ?? null;
+
+        await prisma.user.update({
+            data: {
+                profile: avatar
+            },
+            where: {
+                email
+            }
+        })
+
+        const response: HttpResponse<null> = {
+            status: 200,
+            message: "Success",
+            data: null
+        };
+
+        res.json(response);
+    } catch (error: unknown) {
+        next(error);
+    }
+}
+
+export async function changeName(req: AuthenticatedRequest<any>, res: Response, next: NextFunction) {
+    try {
+        const email = req.data?.email ?? '';
+        const name: string = req.body?.name ?? null;
+
+        await prisma.user.update({
+            data: {
+                name
+            },
+            where: {
+                email
+            }
+        })
+
+        const response: HttpResponse<null> = {
+            status: 200,
+            message: "Success",
+            data: null
+        };
 
         res.json(response);
     } catch (error: unknown) {

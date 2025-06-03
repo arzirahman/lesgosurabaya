@@ -188,7 +188,9 @@ export default function ExploreDetail() {
                 <div className="w-auto inline-flex rounded-[12px] bg-[#0C2A740D] items-center gap-[6px] py-[6px] px-[10px] font-medium text-xs">
                     {(summaryRate?.profiles.length ?? 0) > 0 && <div className="flex -space-x-4">
                         {summaryRate?.profiles.map((profile, index) => (
-                            <img key={'avatar.' + index} className="w-[33px] h-[33px] rounded-full border-2 border-white" src={profile ?? "/images/profile.jpg"} alt="" />
+                            <div className="w-[33px] h-[33px] rounded-full border-2 border-white overflow-hidden flex justify-center items-center" key={'avatar.' + index}>
+                                <img className="w-[35px] h-[35px] object-cover" src={profile ?? "/images/profile.jpg"} alt="" />
+                            </div>
                         ))}
                     </div>}
                     <span>{summaryRate?.total ?? 0}</span>

@@ -136,9 +136,9 @@ export default function Navbar() {
                             <path d="M27.919 24.586L22.8243 19.509C23.877 17.928 24.4931 16.035 24.4931 14C24.4931 8.486 19.9915 4 14.4583 4C8.92517 4 4.42358 8.486 4.42358 14C4.42358 19.514 8.92517 24 14.4583 24C16.5004 24 18.4 23.386 19.9865 22.337L25.0811 27.414C25.8638 28.195 27.1362 28.195 27.919 27.414C28.7027 26.633 28.7027 25.367 27.919 24.586ZM7.43401 14C7.43401 10.14 10.5849 7 14.4583 7C18.3317 7 21.4827 10.14 21.4827 14C21.4827 17.86 18.3317 21 14.4583 21C10.5849 21 7.43401 17.86 7.43401 14Z" fill="white" />
                         </svg>
                     </button>
-                    <Link to={token ? '/profile' : '/sign-up'} className='cursor-pointer w-[33px] h-[33px] overflow-hidden rounded-full'>
+                    <Link to={token ? '/profile' : '/sign-up'} className='cursor-pointer w-[33px] h-[33px] rounded-full overflow-hidden relative flex justify-center items-center'>
                         {token ? (
-                            <img alt='' src={profile} className='w-full h-full object-cover object-center' />
+                            <img alt='' src={profile} className='min-h-[40px] min-w-[40px] absolute' />
                         ) : (
                             <svg xmlns="http://www.w3.org/2000/svg" width="33" height="37" viewBox="0 0 33 37" fill="none">
                                 <path d="M16.6667 18.4345C19.6224 18.4345 22.0185 15.8114 22.0185 12.5756C22.0185 9.33981 19.6224 6.71669 16.6667 6.71669C13.7109 6.71669 11.3148 9.33981 11.3148 12.5756C11.3148 15.8114 13.7109 18.4345 16.6667 18.4345Z" fill="white" />

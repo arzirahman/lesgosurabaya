@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Cookies from 'js-cookie';
 import { request } from "../../utils/request";
 import background from '../../assets/images/home/section2/background.png';
@@ -10,6 +10,10 @@ export default function Profile() {
     const [profile, setProfile] = useState<string>();
     const navigate = useNavigate();
     const loc = useLocation();
+    const [showAvatars, setShowAvatars] = useState(false);
+    const avatarRef = useRef<HTMLDivElement>(null);
+    const avatarEditRef = useRef<HTMLButtonElement>(null);
+    const [name, setName] = useState('');
 
     useEffect(() => {
         const getFavouriteAndLike = async () => {
@@ -18,6 +22,7 @@ export default function Profile() {
             try {
                 const response = await request().get("/favourite-and-like");
                 setData(response.data.data);
+                setName(response.data.data?.user?.name ?? '');
             } catch (error: unknown) { }
         }
 
@@ -27,21 +32,41 @@ export default function Profile() {
     useEffect(() => {
         const token = Cookies.get('lesgosurabaya') ?? null;
 
-        const fetchImage = async () => {
-            const response = await fetch((import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:4000/api') + '/profile', {
-                headers: {
-                    Authorization: 'Bearer ' + token
-                }
-            });
-
-            const data = await response.json();
-            setProfile(data.data.profile);
-        };
-
         if (!profile && token) {
             fetchImage();
         }
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                avatarRef.current &&
+                !avatarRef.current.contains(event.target as Node) &&
+                avatarEditRef.current &&
+                !avatarEditRef.current.contains(event.target as Node)
+            ) {
+                setShowAvatars(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+    const fetchImage = async () => {
+        const token = Cookies.get('lesgosurabaya') ?? null;
+
+        const response = await fetch((import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:4000/api') + '/profile', {
+            headers: {
+                Authorization: 'Bearer ' + token
+            }
+        });
+
+        const data = await response.json();
+        setProfile(data.data.profile);
+    };
 
     const logout = () => {
         Cookies.remove('lesgosurabaya', {
@@ -65,18 +90,53 @@ export default function Profile() {
         return loc.pathname + loc.search
     }
 
+    const changeAvatar = async (src: string) => {
+        setProfile(src);
+        try {
+            await request({ noLoading: true }).post("/change-avatar", { avatar: src });
+        } catch (error) { }
+    }
+
+    const changeName = async (name: string) => {
+        setName(name);
+        if (name) {
+            try {
+                await request({ noLoading: true }).post("/change-name", { name });
+            } catch (error) { }
+        }
+    }
+
     return (
         <div className="w-full pt-[100px] min-h-[100svh] relative">
             <div className="w-full max-w-[1440px] mx-auto py-[40px] px-[40px] flex flex-col h-full relative">
                 <div className="flex justify-between gap-[40px] items-center">
                     <div className="flex w-[748px] items-center relative py-[40px] mb-[40px]">
                         <div className="bg-[#D9D9D9] flex flex-col rounded-[20px] px-[90px] py-[16px] w-[633px]">
-                            <span className="font-extrabold text-[48px] leading-[76px] max-w-[400px] overflow-hidden text-ellipsis whitespace-nowrap">Hi, {data?.user?.name}</span>
+                            <div className="font-extrabold text-[48px] leading-[76px] max-w-[400px] flex">
+                                <span>Hi,</span>
+                                <input
+                                    value={name}
+                                    onChange={(e) => changeName(e.target.value)}
+                                    className="w-full pl-[12px] outline-none text-ellipsis text-nowrap border-b-transparent cursor-pointer border-b-[2px] border-transparent focus:border-black focus:cursor-text transition-all duration-300"
+                                />
+                            </div>
                             <span className="font-semibold text-2xl">Ready to explore Surabaya?</span>
                         </div>
 
                         <div className="absolute right-0 rounded-full w-[230px] h-[230px] overflow-hidden bg-[#cccccc]">
-                            <img alt="Name" src={profile} className="w-full h-full object-cover object-center" />
+                            <img alt="Name" src={profile} className="w-[270px] h-[270px] absolute top-[-25px] object-cover object-center" />
+                        </div>
+
+                        <button ref={avatarEditRef} onClick={() => setShowAvatars(prev => !prev)} className="w-[35px] z-[1] h-[35px] shadow-md bg-white rounded-full absolute bottom-[27px] right-[160px] flex items-center justify-center cursor-pointer">
+                            <svg className="feather feather-edit" fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>
+                        </button>
+
+                        <div ref={avatarRef} className={`${showAvatars ? 'h-[210px]' : 'h-0'} transition-all duration-300 overflow-hidden grid grid-cols-3 absolute top-[200px] right-0`}>
+                            {(new Array(9)).fill('Avatar.Select').map((item, i) => (
+                                <button onClick={() => { changeAvatar(`/images/avatar/${i + 1}.svg`) }} key={`${item}${i}`} className="cursor-pointer h-[70px] w-[70px]">
+                                    <img className="w-full h-full" alt="" src={`/images/avatar/${i + 1}.svg`} />
+                                </button>
+                            ))}
                         </div>
                     </div>
                     <button onClick={logout} className="cursor-pointer rounded-[12px] p-[12px] bg-[#D9D9D9] z-[1] translate-y-[-50px] translate-x-[-20px]">
